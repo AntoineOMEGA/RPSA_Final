@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+#login-page, #register-page, #home-page {
+    display: none;
+}
+
+#mapid {
+    height: 480px;
+}
+
+header {
+    height: 60px;
+    background-color: rgb(22, 219, 88);
+    box-shadow: 0 2px 5px #222;
+}
+
+h1 {
+    width: 400px;
+    float: left;
+    line-height: 60px;
+}
+
+nav {
+    float: right;
+}
+
+main {
+    margin-top: 10px;
+}
+
+.container {
+    margin: 0 auto;
+    width: 960px;
+}
+
+.space {
+    height: 10px;
+}
+
+#update {
+    display: none;
+}
+
+#submission, #update {
+    width: 100%;
+    height: 70px;
+    padding: 20px;
+    background-color: #DDD;
+}
+
+.input, .delete, .update {
+    padding: 5px;
+}
+
+#logout-link, #register-link, #login-link {
+    height: 60px;
+    width: 140px;
+    line-height: 60px;
+    background: none;
+    border: none;
+    font-weight: bold;
+}
+
+#registration-panel, #login-panel {
+    width: 480px;
+    margin: 20px auto;
+}
+
+#registration-panel input, #login-panel input{
+    height: 40px;
+    width: 240px;
+    padding: 5px;
+    margin: 5px auto;
+    box-sizing: border-box;
+    display: block;
+}
+
+#registration-panel button, #login-panel button{
+    height: 40px;
+    width: 240px;
+    padding: 5px;
+    margin: 5px auto;
+    box-sizing: border-box;
+    display: block;
+}

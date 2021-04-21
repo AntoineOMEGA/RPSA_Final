@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>RPSA</title>
+    <link href="style.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin="" />
+</head>
+
+<body>
+    <div id="register-page">
+        <header>
+            <div class="container">
+                <h1>RPSA</h1>
+                <nav>
+                    <button id="login-link" class="nav" onclick="setActivePage('login-page')">Login</button>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <div id="registration-panel">
+                    <input id="registration-firstname-input" type="text" placeholder="First Name" autocomplete="given-name">
+                    <br>
+                    <input id="registration-lastname-input" type="text" placeholder="Last Name" autocomplete="family-name">
+                    <br>
+                    <input id="registration-email-input" type="text" placeholder="Email" autocomplete="email">
+                    <br>
+                    <input id="registration-password-input" type="text" placeholder="Password" autocomplete="current-password">
+                    <br>
+                    <button id="register" class="submit" onclick="register()">Register</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <div id="login-page">
+        <header>
+            <div class="container">
+                <h1>RPSA</h1>
+                <nav>
+                    <button id="register-link" class="nav" onclick="setActivePage('register-page')">Register</button>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <div id="login-panel">
+                    <input id="login-email-input" type="text" placeholder="Email" autocomplete="email">
+                    <br>
+                    <input id="login-password-input" type="text" placeholder="Password" autocomplete="current-password">
+                    <br>
+                    <button id="login" onclick="login()">Login</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <div id="home-page">
+        <header>
+            <div class="container">
+                <h1>RPSA</h1>
+                <nav>
+                    <input id="search" class="input" type="text" placeholder="ID to Search">
+                    <button id="search-button" class="input">Search</button>
+                    <button id="logout-link" class="nav" onclick="logout()">Log Out</button>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <div><strong>Add a marker:</strong> Click on the map. Fill out title, description, and category fields.
+                    Submit Location.</div>
+                <div><strong>Update a marker:</strong> Click on a marker. Change the title, description, or category
+                    field. Update Location.</div>
+                <div class="space"></div>
+                <div id="mapid"></div>
+                <div id="submission">
+                    <input id="new-title" class="input" type="text" placeholder="Title">
+                    <input id="new-description" class="input" type="text" placeholder="Description">
+                    <input id="new-category" class="input" type="text" placeholder="Category">
+                    <button id="submit-button" class="input">Submit Location</button>
+                </div>
+                <div id="update">
+                    <input id="update-title" class="input" type="text" placeholder="Title">
+                    <input id="update-description" class="input" type="text" placeholder="Description">
+                    <input id="update-category" class="input" type="text" placeholder="Category">
+                    <button id="update-button" class="input" onclick="updateLocation(update_id)">Update
+                        Location</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!--JAVASCRIPT-->
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+        integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+        crossorigin=""></script>
+    <script type="text/javascript" src="http://maps.stamen.com/js/tile.stamen.js?v1.3.0"></script>
+    <script src="app.js" type="text/javascript"></script>
+</body>
+
+</html>
